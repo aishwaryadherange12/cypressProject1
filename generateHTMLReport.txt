@@ -1,0 +1,25 @@
+//To Report Using HTML 
+Add following code in cypress.json file
+//-------------------------------------
+{
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html":true,
+        "json": false,
+        "timestamp":"mmddyyyy_HHMMss" 
+    }
+}
+
+
+//-------install mocha
+
+npm install --save-dev mochawesome
+
+//-------install mochawesome
+
+npm install --save-dev mocha
+
+//Run File in Headless Mode
+npx cypress run --spec cypress\integration\cura.spec.js --browser=chrome
